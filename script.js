@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Typing effect for main page
+    // Typing effect for main page (if needed)
     const text = "A NEW ELECTRONIC BLEND IS RISING. STAY TUNED.";
     const typingElement = document.querySelector(".typing-text");
     const typingSpeed = 50;
@@ -38,26 +38,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const cookieBanner = document.getElementById('cookie-banner');
     const acceptCookiesButton = document.getElementById('accept-cookies');
 
+    // Check if cookies have already been accepted
     if (!localStorage.getItem('cookiesAccepted')) {
-        cookieBanner.style.display = 'flex';
+        cookieBanner.style.display = 'flex'; // Show the cookie banner if not accepted
     }
 
+    // When "Accept" button is clicked, store the acceptance in localStorage and hide the banner
     acceptCookiesButton.addEventListener('click', function () {
-        localStorage.setItem('cookiesAccepted', 'true');
-        cookieBanner.style.display = 'none';
+        localStorage.setItem('cookiesAccepted', 'true'); // Store acceptance in localStorage
+        cookieBanner.style.display = 'none'; // Hide the cookie banner
     });
 
-    // Logo link navigation
-    const logoLink = document.getElementById("logo-link");
-
-    if (logoLink) {
-        logoLink.addEventListener("click", function (event) {
-            event.preventDefault(); // Prevent the default link behavior
-            window.location.href = "index.html"; // Redirect to index.html
-        });
-    }
-
-    // Page transition effect
+    // Page transition effect (fade-in on load)
     document.body.classList.add("fade-in");
 
     // Add event listener for all internal links to apply fade-out effect
