@@ -1,5 +1,5 @@
 import "./globals.css";
-import Footer from "../components/Footer"; // Import Footer component
+import Footer from "../components/Footer";
 
 export const metadata = {
   title: "Cyclades Records",
@@ -9,18 +9,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon_io/favicon.ico" />
+      </head>
       <body>
-        {/* Header Section */}
         <header className="top-left-logo">
           <a href="/">
-            <img src="/cyclades_logo_white.png" alt="Cyclades Records Logo" />
+            <img 
+              src="/cyclades_logo_white.png" 
+              alt="Cyclades Records Logo" 
+              draggable="false"
+            />
           </a>
         </header>
 
-        {/* Main Content */}
         {children}
-
-        {/* Footer Section */}
+        
         <Footer />
       </body>
     </html>

@@ -5,7 +5,6 @@ export default function CookieBanner() {
   const [showCookieBanner, setShowCookieBanner] = useState(false);
 
   useEffect(() => {
-    // Check cookie acceptance status after component mounts
     setShowCookieBanner(!localStorage.getItem("cookiesAccepted"));
   }, []);
 

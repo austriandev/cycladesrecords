@@ -3,7 +3,7 @@ export default function Footer() {
       <footer>
         <div className="footer-content">
           <div className="social-media">
-            <a href="https://instagram.com">Instagram</a>
+            <a href="https://instagram.com/cyclades_official">Instagram</a>
             <a href="/terms">Terms and Conditions</a>
             <a href="/privacy">Privacy Policy</a>
           </div>
